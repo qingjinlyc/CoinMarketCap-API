@@ -25,7 +25,7 @@ public class CoinMarketList implements List<CoinMarket> {
         if (markets == null) {
             throw new NullPointerException("markets argument may not be null.");
         }
-        this.marketList = Collections.unmodifiableList(new ArrayList<>(markets));
+        this.marketList = new ArrayList<>(markets);
     }
 
     /**
